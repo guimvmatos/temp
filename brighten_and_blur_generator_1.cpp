@@ -33,7 +33,7 @@ public:
         blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x + r.x, y + r.y);
 
         Func hw_output("hw_output");
-        hw_output(x, y) = blur(x, y) / 4;
+        hw_output(x, y) = blur(x, y);
         output(x, y) = cast<uint8_t>(hw_output(x,y));
 
         /* THE SCHEDULE */
