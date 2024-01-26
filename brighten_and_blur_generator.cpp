@@ -17,8 +17,8 @@ public:
 
         Func kernel("kernel");
         Func blur("blur");
-        RDom r(0, 3,
-               0, 3);
+        RDom r(0, 2,
+               0, 2);
 
         kernel(x,y) = 0;
         kernel(0,0) = 1;      kernel(0,1) = 1;
@@ -33,7 +33,7 @@ public:
         brighten(x, y) = hw_input(x, y);
 
         //blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x + r.x, y + r.y);
-        blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(r.x, r.y);
+        blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y));
 
         Func hw_output("hw_output");
 
