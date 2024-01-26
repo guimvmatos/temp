@@ -17,8 +17,8 @@ public:
 
         Func kernel("kernel");
         Func blur("blur");
-        RDom r(0, 2,
-               0, 2);
+        RDom r(0, 3,
+               0, 3);
 
         kernel(x,y) = 0;
         kernel(0,0) = 1;      kernel(0,1) = 1;
