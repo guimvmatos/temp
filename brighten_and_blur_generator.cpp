@@ -29,7 +29,7 @@ public:
         Func hw_input("hw_input");
         Func brighten;
         hw_input(x, y) = cast<uint16_t>(input(x, y));
-        brighten(x, y) = hw_input(x, y) * 4;
+        brighten(x, y) = hw_input(x, y) * 10;
         //brighten(x, y) = hw_input(x, y);
 
         blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x + r.x, y + r.y);
