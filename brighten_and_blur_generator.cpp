@@ -37,7 +37,7 @@ public:
 
         Func hw_output("hw_output");
 
-        hw_output(x, y) = blur(x, y) / 4;
+        hw_output(x, y) = blur(x, y) / 1;
         //hw_output(x, y) = blur(x, y);
 
         output(x, y) = cast<uint8_t>(hw_output(x,y));
