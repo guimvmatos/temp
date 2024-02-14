@@ -32,8 +32,8 @@ public:
         //brighten(x, y) = hw_input(x, y) * 2;
         brighten(x, y) = hw_input(x, y);
 
-        blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x + r.x, y + r.y);
-        //blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * hw_input(x, y);
+        //blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x + r.x, y + r.y);
+        blur(x, y)  += cast<uint16_t>(kernel(r.x, r.y)) * brighten(x,y);
 
         Func hw_output("hw_output");
 
